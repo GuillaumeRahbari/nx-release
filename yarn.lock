@@ -1274,12 +1274,15 @@
           resolution: "@my-namespace/package-a@workspace:packages/package-a"
           dependencies:
             "@my-namespace/package-b": "npm:^1.0.0"
+            tslib: "npm:^2.3.0"
           languageName: unknown
           linkType: soft
         
         "@my-namespace/package-b@npm:^1.0.0, @my-namespace/package-b@workspace:packages/package-b":
           version: 0.0.0-use.local
           resolution: "@my-namespace/package-b@workspace:packages/package-b"
+          dependencies:
+            tslib: "npm:^2.3.0"
           languageName: unknown
           linkType: soft
         
@@ -2737,14 +2740,6 @@
           checksum: 10/aa92de608021b242401676e35cfa5aa42dd70cbdc082b916da7fb925c542173e36bce97ea3e804923fe92c0ad991434e4a38327e15a1b5b5f945d66df615ae6d
           languageName: node
           linkType: hard
-        
-        "mylib@workspace:libs/mylib":
-          version: 0.0.0-use.local
-          resolution: "mylib@workspace:libs/mylib"
-          dependencies:
-            tslib: "npm:^2.3.0"
-          languageName: unknown
-          linkType: soft
         
         "node-machine-id@npm:1.1.12":
           version: 1.1.12
