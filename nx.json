@@ -36,8 +36,7 @@
     },
     "changelog": {
       "projectChangelogs": {
-        "file": false,
-        "createRelease": "github"
+        "file": false
       }
     },
     "git": {

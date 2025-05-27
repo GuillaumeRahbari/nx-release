@@ -1,0 +1,21 @@
+{
+  "name": "package-a",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/package-a/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project package-a --web",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "publishable": true,
+        "outputPath": "dist/packages/package-a",
+        "main": "packages/package-a/src/index.ts",
+        "tsConfig": "packages/package-a/tsconfig.lib.json",
+        "assets": ["packages/package-a/*.md"]
+      }
+    }
+  }
+}
